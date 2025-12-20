@@ -11,7 +11,7 @@ class A{
     public int getAge() {
         return age;
     }
-    class B{
+    static class B{
         public void name(){
             System.out.println("in Class B");
         }
@@ -19,12 +19,15 @@ class A{
 }
 
 
-
-
-
-
 public class JAVA_2025_12_20_2_Innerclass {
     public static void main(String[] args) {
-        System.out.println("hello");
+        // System.out.println("hello");
+        A obj =new A();
+        obj.setter("ram", 26);
+        obj.getAge();
+        obj.getName();
+
+        A.B obj1=new B();
+        obj1.name();
     }
 }
