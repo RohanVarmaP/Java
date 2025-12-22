@@ -11,6 +11,9 @@ class A{
     public int getAge() {
         return age;
     }
+    public void show(){
+        System.out.println("in class A");
+    }
     static class B{
         public void name(){
             System.out.println("in Class B");
@@ -22,12 +25,20 @@ class A{
 public class JAVA_2025_12_20_2_Innerclass {
     public static void main(String[] args) {
         // System.out.println("hello");
-        A obj =new A();
-        obj.setter("ram", 26);
-        obj.getAge();
-        obj.getName();
+        // A obj =new A();
+        // obj.setter("ram", 26);
+        // System.out.println(obj.getAge());
+        // System.out.println(obj.getName()); 
 
-        A.B obj1=new B();
-        obj1.name();
+        // A.B obj1=new A.B();
+        // obj1.name();
+
+        //Anonymous Inner Class
+        A obj=new A(){
+            public void show(){
+                System.out.println("in new class A");
+            }
+        };
+        obj.show();
     }
 }
