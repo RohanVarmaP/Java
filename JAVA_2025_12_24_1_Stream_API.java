@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 
 public class JAVA_2025_12_24_1_Stream_API {
     public static void main(String[] args) {
-        List<Integer> num=Arrays.asList(4,9,3,2,5);
+        List<Integer> num=Arrays.asList(4,9,3,2,6,5);
 
         //adding all the even number in a list
         // int sum=0;
@@ -20,8 +20,27 @@ public class JAVA_2025_12_24_1_Stream_API {
         // num.forEach(n->System.out.println(n));
 
         //using Stream
-        Stream<Integer> s1=num.stream();
-        s1.forEach(n->System.out.println(n));
+        // Stream<Integer> s1=num.stream();
+        // Stream<Integer> s2=s1.filter(n->n%2==0);
+        // Stream<Integer> s3=s2.map(n->n+2);
+        // int result=s3.reduce(0,(c,e)->c+e);
+        // // s1.forEach(n->System.out.println(n));
+        // // s2.forEach(n->System.out.println(n));
+        // // s3.forEach(n->System.out.println(n));
+        // // s1.forEach(n->System.out.println(n));//can only used once.
+        // System.out.println(result);
+
+        // int result=num.stream()
+        //     .filter(n->n%2==0)
+        //     .map(n->n+2)
+        //     .reduce(0,(c,e)->c+e);
+        // System.out.println(result);
+
+        Stream<Integer> s=num.stream()
+            .filter(n->n%2==0)
+            .map(n->n+2)
+            .sorted();
+        s.forEach(n-> System.out.println(n));
         
     }
 }
