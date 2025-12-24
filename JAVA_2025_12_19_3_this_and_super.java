@@ -24,6 +24,7 @@ public class JAVA_2025_12_19_3_this_and_super {
     public static void main(String[] args) {
         // B obj=new B(5);
         B obj=new B();
+        System.out.println(obj);
 
     }
 }

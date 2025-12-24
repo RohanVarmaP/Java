@@ -73,7 +73,7 @@ public class JAVA_2025_12_19_1_static {
 
         //static method
         Mobile ob1=new Mobile();
-        ob1.brand="Oppo";
+        // ob1.brand="Oppo";
         ob1.name="K3";
         ob1.price=15000;
         Mobile.showing(ob1);//works with class not object

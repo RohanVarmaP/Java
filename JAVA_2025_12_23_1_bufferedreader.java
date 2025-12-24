@@ -1,6 +1,6 @@
-import java.io.BufferedReader;
+// import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+// import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class JAVA_2025_12_23_1_bufferedreader {
