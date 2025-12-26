@@ -50,7 +50,12 @@ class LinkedList{
                 Node node=new Node(data,null);
                 Node n =head;
                 for(int i=1;i<index;i++){
-                    n=n.getNext();
+                    if(n!=null){
+                        n=n.getNext();
+                    }else{
+                        System.out.println("Index exceeded List size");
+                        return;
+                    }
                 }
                 node.setNext(n.getNext());
                 n.setNext(node);
@@ -68,15 +73,30 @@ class LinkedList{
             n.setNext(null);
         }
     }
-    public void removeAt(int index){
+    public void removeAtFirst(){
         if(head==null){
             return;
         }else{
             Node n=head;
+            head=n.getNext();
+        }
+    }
+    public void removeAt(int index){
+        if(head==null){
+            return;
+        }else if(index==0){
+            removeAtFirst();
+        }else{
+            Node n=head;
             Node prev=null;
             for(int i=0;i<index;i++){
-                prev=n;
-                n=n.getNext();
+                if(n!=null){    
+                    prev=n;
+                    n=n.getNext();
+                }else{
+                        System.out.println("Index exceeded List size");
+                        return;
+                }
             }
             prev.setNext(n.getNext());
         }
@@ -122,7 +142,8 @@ public class JAVA_2025_12_24_2_linkedList {
         l.show();
         l.remove();
         l.show();
-        l.removeAt(3);
+        l.removeAt(15);
+        l.removeAt(0);
         l.show();
         System.out.println("Size: "+l.size());
     }
